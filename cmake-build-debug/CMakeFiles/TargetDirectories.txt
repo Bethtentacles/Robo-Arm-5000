@@ -1,0 +1,3 @@
+C:/Users/Bethl/CLionProjects/Robo Arm 5000/cmake-build-debug/CMakeFiles/Robo_Arm_5000.dir
+C:/Users/Bethl/CLionProjects/Robo Arm 5000/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Bethl/CLionProjects/Robo Arm 5000/cmake-build-debug/CMakeFiles/rebuild_cache.dir
