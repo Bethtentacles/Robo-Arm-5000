@@ -3,3 +3,7 @@
 //
 
 #include "Tool_head.h"
+
+#include <string>
+
+Tool_head::Tool_head():

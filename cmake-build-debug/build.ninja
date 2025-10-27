@@ -70,6 +70,20 @@ build CMakeFiles/Robo_Arm_5000.dir/src/Tool_head.cpp.obj: CXX_COMPILER__Robo_Arm
   OBJECT_DIR = CMakeFiles\Robo_Arm_5000.dir
   OBJECT_FILE_DIR = CMakeFiles\Robo_Arm_5000.dir\src
 
+build CMakeFiles/Robo_Arm_5000.dir/src/Kinematics.cpp.obj: CXX_COMPILER__Robo_Arm_5000_unscanned_Debug C$:/Users/Bethl/CLionProjects/Robo$ Arm$ 5000/src/Kinematics.cpp || cmake_object_order_depends_target_Robo_Arm_5000
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\Robo_Arm_5000.dir\src\Kinematics.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Robo_Arm_5000.dir
+  OBJECT_FILE_DIR = CMakeFiles\Robo_Arm_5000.dir\src
+
+build CMakeFiles/Robo_Arm_5000.dir/src/Input_control.cpp.obj: CXX_COMPILER__Robo_Arm_5000_unscanned_Debug C$:/Users/Bethl/CLionProjects/Robo$ Arm$ 5000/src/Input_control.cpp || cmake_object_order_depends_target_Robo_Arm_5000
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\Robo_Arm_5000.dir\src\Input_control.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Robo_Arm_5000.dir
+  OBJECT_FILE_DIR = CMakeFiles\Robo_Arm_5000.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Robo_Arm_5000
@@ -78,7 +92,7 @@ build CMakeFiles/Robo_Arm_5000.dir/src/Tool_head.cpp.obj: CXX_COMPILER__Robo_Arm
 #############################################
 # Link the executable Robo_Arm_5000.exe
 
-build Robo_Arm_5000.exe: CXX_EXECUTABLE_LINKER__Robo_Arm_5000_Debug CMakeFiles/Robo_Arm_5000.dir/src/main.cpp.obj CMakeFiles/Robo_Arm_5000.dir/src/Servo_control.cpp.obj CMakeFiles/Robo_Arm_5000.dir/src/Tool_head.cpp.obj
+build Robo_Arm_5000.exe: CXX_EXECUTABLE_LINKER__Robo_Arm_5000_Debug CMakeFiles/Robo_Arm_5000.dir/src/main.cpp.obj CMakeFiles/Robo_Arm_5000.dir/src/Servo_control.cpp.obj CMakeFiles/Robo_Arm_5000.dir/src/Tool_head.cpp.obj CMakeFiles/Robo_Arm_5000.dir/src/Kinematics.cpp.obj CMakeFiles/Robo_Arm_5000.dir/src/Input_control.cpp.obj
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
