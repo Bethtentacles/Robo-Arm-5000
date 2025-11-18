@@ -1,7 +1,7 @@
 #include "ElectroMagnet.h"
 
 ElectroMagnet::ElectroMagnet(int control_pin)
-  : ToolHead(Type::ElectroMagnet), pin(control_pin) {
+  : pin(control_pin) {
 }
 
 void ElectroMagnet::begin() {

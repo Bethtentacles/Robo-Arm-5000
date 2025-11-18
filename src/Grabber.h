@@ -1,24 +1,28 @@
 #ifndef GRABBER_H
 #define GRABBER_H
 
-#include "ToolHead.h"
 #include "Servo_c.h"
 
-class Grabber : public ToolHead {
-  public:
-    // servo_pin: the servo controlling the grabber
-    // grabbed_angle: angle used to grab (default 90)
-    // released_angle: angle used to release (default 180)
-    Grabber(int servo_pin, int grabbed_angle = 90, int released_angle = 180);
-    void begin() override;
-    void engage() override;    // close/grab
-    void disengage() override; // open/release
-    void update() override;
-
+class Grabber {
   private:
     Servo_c servo;
-    int grabbed_angle;
-    int released_angle;
+    const int grabbed_angle;
+    const int released_angle;
+    bool engaged_state = false;
+
+  public:
+    // servo pin the servo controlling the grabber
+    Grabber(int servo_pin);
+
+    void begin();
+    void engage();    // close/grab (keeps compatibility)
+    void disengage(); // open/release (keeps compatibility)
+    void update();
+
+    // New API: set/get engaged state in one call. When `on` is true the
+    // servo moves to `grabbed_angle`, when false it moves to `released_angle`.
+    void engage_grabber(bool on);
+    bool is_engaged() const { return engaged_state; }
 };
 
 #endif

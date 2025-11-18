@@ -1,7 +1,8 @@
 #include "Grabber.h"
 
-Grabber::Grabber(int servo_pin, int grabbed_angle_, int released_angle_)
-  : ToolHead(Type::Grabber), servo(servo_pin, 0, 180), grabbed_angle(grabbed_angle_), released_angle(released_angle_) {
+// Default angles: grabbed = 90, released = 180
+Grabber::Grabber(int servo_pin)
+  : servo(servo_pin, 0, 180), grabbed_angle(90), released_angle(180) {
 }
 
 void Grabber::begin() {

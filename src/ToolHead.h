@@ -10,22 +10,23 @@ class ToolHead {
       Grabber
     };
 
-    ToolHead(Type t) : type(t) {}
-    virtual ~ToolHead() {}
+    ToolHead(Type t, int pin, int button_pin = -1);
+    ~ToolHead();
 
     Type getType() const { return type; }
+    int getButtonPin() const { return button_pin; }
 
-    // lifecycle
-    virtual void begin() = 0;
-    // engage the tool (grab or turn on magnet)
-    virtual void engage() = 0;
-    // disengage the tool (release or turn off magnet)
-    virtual void disengage() = 0;
-    // optional periodic update
-    virtual void update() {}
+    void begin();
+    void engage();
+    void disengage();
+    void update();
 
   private:
     Type type;
+    int button_pin;
+    // only one of these is non-null depending on `type`
+    Grabber* grabber = nullptr;
+    ElectroMagnet* magnet = nullptr;
 };
 
 #endif
