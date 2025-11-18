@@ -1,7 +1,11 @@
+
 #ifndef TOOLHEAD_H
 #define TOOLHEAD_H
 
 #include <Arduino.h>
+
+class Grabber;
+class ElectroMagnet;
 
 class ToolHead {
   public:
@@ -24,9 +28,8 @@ class ToolHead {
   private:
     Type type;
     int button_pin;
-    // only one of these is non-null depending on `type`
-    Grabber* grabber = nullptr;
-    ElectroMagnet* magnet = nullptr;
+    Grabber* grabber;
+    ElectroMagnet* magnet;
 };
 
 #endif

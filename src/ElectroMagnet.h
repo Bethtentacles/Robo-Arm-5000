@@ -12,8 +12,11 @@ class ElectroMagnet {
     ElectroMagnet(int control_pin);
 
     void begin();
-    void engage();    // turn magnet on
-    void disengage(); // turn magnet off
+
+    //turn on and off the electromagnet
+    void engage();
+    void disengage();
+    
     void update();
 };
 
