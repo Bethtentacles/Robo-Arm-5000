@@ -15,14 +15,19 @@ class Grabber {
     Grabber(int servo_pin);
 
     void begin();
-    void engage();    // close/grab (keeps compatibility)
-    void disengage(); // open/release (keeps compatibility)
-    void update();
+
+    // Old API keep for compatibility
+    void engage();   
+    void disengage(); 
+
 
     // New API: set/get engaged state in one call. When `on` is true the
     // servo moves to `grabbed_angle`, when false it moves to `released_angle`.
     void engage_grabber(bool on);
     bool is_engaged() const { return engaged_state; }
+
+        
+    void update();
 };
 
 #endif

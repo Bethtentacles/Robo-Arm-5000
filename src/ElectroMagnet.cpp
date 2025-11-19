@@ -4,9 +4,10 @@ ElectroMagnet::ElectroMagnet(int control_pin)
   : pin(control_pin) {
 }
 
+
+  // default off need timer or magnet will burn out
 void ElectroMagnet::begin() {
   pinMode(pin, OUTPUT);
-  // default off
   digitalWrite(pin, LOW);
 }
 
