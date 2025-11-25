@@ -20,5 +20,4 @@ void ElectroMagnet::disengage() {
 }
 
 void ElectroMagnet::update() {
-  // no periodic tasks for a simple on/off magnet
 }

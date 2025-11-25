@@ -2,6 +2,7 @@
 #define GRABBER_H
 
 #include "Servo_c.h"
+#include "PCA9685.h"
 
 class Grabber {
   private:
@@ -11,8 +12,7 @@ class Grabber {
     bool engaged_state = false;
 
   public:
-    // servo pin the servo controlling the grabber
-    Grabber(int servo_pin);
+    Grabber(PCA9685* pca_instance, int channel, int grabbed_ang = 90, int released_ang = 180);
 
     void begin();
 

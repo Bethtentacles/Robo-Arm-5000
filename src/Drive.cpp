@@ -1,7 +1,7 @@
 #include "Drive.h"
 
-Drive::Drive(int pot_pin, int low, int high, int pot_angle, int servo_pin, int minL, int maxL)
-  : pot(pot_pin, low, high, pot_angle), servo(servo_pin, minL, maxL) {
+Drive::Drive(int pot_pin, int low, int high, int pot_angle, PCA9685* pca_instance, int channel, int min_limit, int max_limit)
+  : pot(pot_pin, low, high, pot_angle), servo(pca_instance, channel, min_limit, max_limit) {
 }
 
 void Drive::begin() {
@@ -14,6 +14,5 @@ void Drive::update() {
   Serial.print(" angle: ");
   Serial.println(angle);
 
-  // drive the servo to the mapped angle
   servo.write(angle);
 }

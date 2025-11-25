@@ -1,15 +1,16 @@
 #include "ToolHead.h"
 #include "Grabber.h"
 #include "ElectroMagnet.h"
+#include "PCA9685.h"
 
-ToolHead::ToolHead(Type t, int pin, int button_pin)
+ToolHead::ToolHead(Type t, PCA9685* pca_instance, int channel, int button_pin)
     : type(t), button_pin(button_pin), grabber(nullptr), magnet(nullptr) {
     switch (type) {
         case Type::Grabber:
-            grabber = new Grabber(pin);
+            grabber = new Grabber(pca_instance, channel);
             break;
         case Type::ElectroMagnet:
-            magnet = new ElectroMagnet(pin);
+            magnet = new ElectroMagnet(channel);
             break;
     }
 }

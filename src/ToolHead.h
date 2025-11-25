@@ -6,6 +6,7 @@
 
 class Grabber;
 class ElectroMagnet;
+class PCA9685;
 
 class ToolHead {
   public:
@@ -14,11 +15,11 @@ class ToolHead {
       Grabber
     };
 
-    ToolHead(Type t, int pin, int button_pin = -1);
+    ToolHead(Type t, PCA9685* pca_instance, int channel, int button_pin = -1);
     ~ToolHead();
 
-    Type getType() const { return type; }
-    int getButtonPin() const { return button_pin; }
+    Type get_type() const { return type; }
+    int get_button_pin() const { return button_pin; }
 
     void begin();
     void engage();

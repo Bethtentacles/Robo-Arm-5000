@@ -1,8 +1,7 @@
 #include "Grabber.h"
 
-// Default angles: grabbed = 90, released = 180
-Grabber::Grabber(int servo_pin)
-  : servo(servo_pin, 0, 180), grabbed_angle(90), released_angle(180) {
+Grabber::Grabber(PCA9685* pca_instance, int channel, int grabbed_ang, int released_ang)
+  : servo(pca_instance, channel, 0, 180), grabbed_angle(grabbed_ang), released_angle(released_ang) {
 }
 
 
