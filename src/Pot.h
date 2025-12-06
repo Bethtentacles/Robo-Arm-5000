@@ -11,7 +11,10 @@ class Pot {
     int angle_max;
 
   public:
-    Pot(int p_pin = A0, int p_low = 0, int p_high = 1023, int p_angle = 180);
+  
+    Pot(int p_pin = A0, int p_low = 0, int p_high = 1023, int p_angle = 270);
+
+
     int get_mapped_angle();
     int get_max_angle() const;
 };

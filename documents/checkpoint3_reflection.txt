@@ -1,0 +1,30 @@
+	Motion Recording
+
+	This feature creates an array that has a time stamp and the values for all Drives on the robotic arm. Push and holding the recording 
+trigger on the handle of the controller will begin recording until the trigger is released. Switching the playback switch on will cause the 
+robotic arm to playback the recorded motion repeatedly until the switch is turned off.
+
+	The feature pulls the position from each drive, currently you have to manually declare the number of drives and each drive along with
+each tool. I would like to better intergrade motion tracking so that it will all be automatic so when you create drives or tools the array
+will reflect the new drive or tool.
+
+	This was very challenging to implement. I when though multiple revisions of the code early on that where dead ends but where enlighten
+It's had various successes and curtain points but is currently not functional at this point but has been with less drives. I'm still currently
+in that troubleshooting loop and likely will not finished by the time this class has ended. It could be a number of things that I hope to try and
+test this weekend.
+
+	This feature is not technically complicated, at least I don't feel like it is. It uses a lot of lesson that where learned early on in the
+class but learning how to put those basic building blocks together to create different things has been but rewarding and frustrating. I probably
+missing some critical knowledge about electrical engineering.
+
+	The code for this project has morphed to more general firmware which I'll likely like to build on. Id like this project to be used more
+generally for any robot with any number of drives or tools. In the future I'll likely implement classes for motor types like stepper motors and
+Close loop control so the micro controller will actually know what the arm is doing.
+
+	I'd say the project is 60% assuming I get everything working. the only other feature I wanted to support was joystick controls using revers
+kinematics to transform XYZ inputs to rotational joint movements. I'm still committed to my original scope but it will be likely that I won't be able
+to complete the project by the end of the semester. The biggest challenge is just trouble shooting, it seems like the hardware doesn't always like to
+cooperate.
+
+
+I've likely spent 40+ hours on this portion of the project.

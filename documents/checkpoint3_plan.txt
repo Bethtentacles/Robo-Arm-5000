@@ -1,0 +1,26 @@
+## Feature Name
+	Motion recording
+
+## Description
+	This feature takes user inputs from the controller and records it, saving it in a large array that can be played back later. 
+
+## Why this feature?
+	In industry, motion recording is used in robotics for repetitive task like painting a car, where smooth organic motions are
+required and can be difficult to program. Its also used in animatronics for the same reasons, recreating natural movements. Its also
+a pretty good party trick.
+
+## Classes involved
+	-MotionTracker: this is the only class modified for this feature to work. but I hope to better integrated it better so instead
+of manually creating a vector for each drive and tool, when you create a drive or tool though the constructor a vector would automatically
+be created.
+
+## Expected user workflow
+	There is a trigger on the handle of the controller, when held, the recording feature will be activated and will continue to record
+until the trigger is released. When playing back there is a switch on the side of the controller. Once switched the robotic arm will
+home (return to origin) pause for a second to make sure the robot its home before beginning playback. There is no feed back loop, so micro processor and the arm doesn't know here it actually is, it depends on timing to accurately recreate the movements (which is why its important
+for the pause, the code is giving time for the robot to perform the movement before it begins playback). 
+	
+	When Motion playback is completed, it will repeat its self until the playback switch is turned off.
+
+## Estimated Time.
+	F***ing days... way too much time. In terms of hours maybe 40 hours.
